@@ -1,8 +1,9 @@
 import { useDispatch } from "react-redux";
 import { menuToggle } from "../utils/store/appSlice";
-
+// import {useNavigate,Link} from 'react-router-dom'
 function Header() {
   const dispatch = useDispatch()
+  // const navigate = useNavigate()
   return (
     <div className="grid grid-flow-col px-2 py-4   shadow-md">
       <div className="col-span-1 h-8 gap-2  flex ">
@@ -11,10 +12,13 @@ function Header() {
           src="https://cdn.icon-icons.com/icons2/2596/PNG/512/hamburger_button_menu_icon_155296.png"
           alt="menu"
         />
+        {/* <Link to='/'> */}
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4TdQa9xvFpj9ZPBKS2HlJauJZyVzqOuUI8ROCBMAX&s"
           alt="youtube icon"
+          // onClick={()=> navigate('/')}
         />
+        {/* </Link> */}
       </div>
       <div className="seach col-span-10  h-8  justify-center flex items-center">
         <input
