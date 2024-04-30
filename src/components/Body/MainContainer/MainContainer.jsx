@@ -1,4 +1,4 @@
-import { buttonsData } from "../../utils/constant"
+import { buttonsData } from "../../../utils/constant"
 import Button from "./Button"
 import VideoContainer from "./VideoContainer"
 function MainContainer() {

@@ -3,7 +3,7 @@ import { useSelector } from "react-redux"
 function SideBar() {
   const menuOpen = useSelector(store => store.app.isMenuOpen)
   return (
-    <div className={ menuOpen? "w-[10rem] pl-4 pt-2 ": 'hidden'}>
+    <div className={ menuOpen? "w-[10rem] pl-4 pt-5 ": 'hidden'}>
       <div>
         <p>Home</p>
         <p>Shorts</p>
