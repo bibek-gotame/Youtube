@@ -1,10 +1,12 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { menuToggle } from "../utils/store/appSlice";
 import { useEffect, useState } from "react";
 import { searchQueryAPI } from "../utils/constant";
+import { addcacheSearch } from "../utils/store/searchSlice";
 // import {useNavigate,Link} from 'react-router-dom'
 function Header() {
   const dispatch = useDispatch();
+  const cache = useSelector(store => store?.search?.cacheSearch)
   // const navigate = useNavigate()
 
   const [searchQuery, setSearchQuery] = useState("");
@@ -13,11 +15,19 @@ function Header() {
   const getSearchSuggestion = async () => {
     const data = await fetch(searchQueryAPI + searchQuery);
     const json = await data.json();
+    console.log('call');
     setsearchSuggestion(json[1]);
+    dispatch(addcacheSearch({[searchQuery]:json[1]}))
   };
 
   useEffect(() => {
-    const timer = setTimeout(() => getSearchSuggestion(), 200);
+    const timer = setTimeout(() => {
+      if (cache[searchQuery]) {
+        setsearchSuggestion(cache[searchQuery]);
+      } else {
+        getSearchSuggestion();
+      }
+    }, 200);
     return () => {
       clearTimeout(timer);
     };
