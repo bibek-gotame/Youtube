@@ -9,13 +9,14 @@ function LiveChat() {
   const chatMessage = useSelector((store) => store.chat.chatMessage);
   const [addMessage, setAddMessage] = useState("");
   useEffect(() => {
-    setInterval(() => {
+    const chat = setInterval(() => {
       dispatch(
         addChat({
           name: generateName(),
           text: generateText(20),
         })
       );
+      return ()=> clearInterval(chat)
     }, 2000);
   }, []);
   return (
