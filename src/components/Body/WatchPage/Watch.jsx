@@ -5,6 +5,7 @@ import { useSearchParams } from "react-router-dom";
 import { commentsData } from "../../../utils/constant";
 import Comment from "./comments/Comment";
 import CommentList from "./comments/CommentList";
+import LiveChat from "./LiveChat/LiveChat";
 
 function Watch() {
   const dispatch = useDispatch();
@@ -15,8 +16,8 @@ function Watch() {
   const [videoId] = useSearchParams();
   console.log(commentsData);
   return (
-    <div className="px-40 py-2">
-      <div>
+    <div className=" py-2  w-fit mx-auto">
+      <div className="flex gap-4  ">
         <iframe
           width="740"
           height="416"
@@ -28,8 +29,9 @@ function Watch() {
           allowFullScreen
           className="rounded-2xl"
         ></iframe>
+        <LiveChat/>
       </div>
-      <div className="comments border-2 px-2 rounded-lg mt-2">
+      <div className="comments border-2 px-2 rounded-lg mt-2 w-[46.25rem]">
         <h1 className="font-bold my-2 text-lg">Comments:</h1>
         <div>
           <CommentList data={commentsData} />
