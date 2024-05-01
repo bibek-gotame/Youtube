@@ -11,11 +11,11 @@ function VideoContainer() {
     const data = await fetch(YTapi);
     const json = await data.json();
     const videos = await json.items;
-    console.log(json);
+    // console.log(json);
     dispatch(addYoutubeVideos(videos));
   };
   useEffect(() => {
-    !youtubeVideos && getVideos();
+    // !youtubeVideos && getVideos();
   }, []);
   return (
     <div className="flex gap-5 pt-5 flex-wrap">
