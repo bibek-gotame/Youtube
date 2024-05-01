@@ -34,7 +34,7 @@ function Header() {
   }, [searchQuery]);
 
   return (
-    <div className="grid grid-flow-col px-2 py-4   shadow-md">
+    <div className="grid grid-flow-col justify-between px-10 py-4   shadow-md">
       <div className="col-span-1 h-8 gap-2  flex ">
         <img
           onClick={() => dispatch(menuToggle())}
@@ -49,6 +49,7 @@ function Header() {
         />
         {/* </Link> */}
       </div>
+
       <div className="relative">
         <div className="search col-span-10   h-8   flex items-center">
           <input
@@ -82,7 +83,7 @@ function Header() {
 
       <div className="col-span-1  ">
         <img
-          className="h-8 mx-auto"
+          className="h-8 border"
           src="https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png"
           alt="user"
         />
