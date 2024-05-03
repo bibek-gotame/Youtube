@@ -15,7 +15,8 @@ function VideoContainer() {
     dispatch(addYoutubeVideos(videos));
   };
   useEffect(() => {
-    // !youtubeVideos && getVideos();
+    !youtubeVideos && getVideos();
+    
   }, []);
   return (
     <div className="flex gap-5 pt-5 flex-wrap">
