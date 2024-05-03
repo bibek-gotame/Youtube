@@ -14,7 +14,7 @@ function Watch() {
   }, []);
 
   const [videoId] = useSearchParams();
-  console.log(commentsData);
+  // console.log(commentsData);
   return (
     <div className=" py-2  w-fit mx-auto">
       <div className="flex gap-4  ">
