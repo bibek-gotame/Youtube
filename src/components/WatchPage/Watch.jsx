@@ -1,9 +1,8 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { closeMenu } from "../../../utils/store/appSlice";
+import { closeMenu } from "../../utils/store/appSlice";
 import { useSearchParams } from "react-router-dom";
-import { commentsData } from "../../../utils/constant";
-import Comment from "./comments/Comment";
+import { commentsData } from "../../utils/constant";
 import CommentList from "./comments/CommentList";
 import LiveChat from "./LiveChat/LiveChat";
 
@@ -14,7 +13,6 @@ function Watch() {
   }, []);
 
   const [videoId] = useSearchParams();
-  // console.log(commentsData);
   return (
     <div className=" py-2  w-fit mx-auto">
       <div className="flex gap-4  ">

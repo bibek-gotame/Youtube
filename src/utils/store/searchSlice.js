@@ -3,7 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const searchSlice = createSlice({
     name: 'search',
     initialState: {
-      cacheSearch:{}
+      cacheSearch:{},
+      searchData:null
     },
     reducers: {
        addcacheSearch:(state,action)=>{

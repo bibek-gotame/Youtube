@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import ChatMessage from "./ChatMessage";
 import { useDispatch, useSelector } from "react-redux";
-import { addChat } from "../../../../utils/store/chatSlice";
-import { generateName, generateText } from "../../../../utils/helper";
+import { addChat } from "../../../utils/store/chatSlice";
+import { generateName, generateText } from "../../../utils/helper";
 
 function LiveChat() {
   const dispatch = useDispatch();
@@ -10,6 +10,7 @@ function LiveChat() {
   const [addMessage, setAddMessage] = useState("");
   useEffect(() => {
     const chat = setInterval(() => {
+      console.log('hi');
       dispatch(
         addChat({
           name: generateName(),

@@ -11,7 +11,7 @@ function VideoContainer() {
     const data = await fetch(YTapi);
     const json = await data.json();
     const videos = await json.items;
-    // console.log(json);
+    console.log(json);
     dispatch(addYoutubeVideos(videos));
   };
   useEffect(() => {
@@ -21,7 +21,7 @@ function VideoContainer() {
   return (
     <div className="flex gap-5 pt-5 flex-wrap">
       {youtubeVideos?.map((video) => (
-        <Link key={video.id} to={"/watch?v=" + video.id}>
+        <Link key={(typeof video.id ==='object'? video.id.videoId : video.id )} to={"/watch?v=" +(typeof video.id ==='object'? video.id.videoId : video.id )}>
           <VideoCard video={video} />
         </Link>
       ))}
