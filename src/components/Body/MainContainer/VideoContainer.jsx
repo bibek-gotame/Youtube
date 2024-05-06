@@ -11,7 +11,7 @@ function VideoContainer() {
     const data = await fetch(YTapi);
     const json = await data.json();
     const videos = await json.items;
-    console.log(json);
+    // console.log(json);
     dispatch(addYoutubeVideos(videos));
   };
   useEffect(() => {

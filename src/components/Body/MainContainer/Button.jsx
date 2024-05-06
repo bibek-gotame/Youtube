@@ -1,7 +1,14 @@
+import { useDispatch } from "react-redux"
+import { addSearchQuery } from "../../../utils/store/searchSlice"
 
 function Button({data}) {
+  const dispatch =useDispatch()
   return (
-    <div className="px-4 py-1 bg-black text-white font-semibold rounded-md">
+    <div
+    onClick={()=>{
+      dispatch(addSearchQuery(data))
+    }}
+     className="px-4 py-1 bg-black text-white font-semibold rounded-md">
         {data}
     </div>
   )

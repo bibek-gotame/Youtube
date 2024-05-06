@@ -1,11 +1,21 @@
-import { useSelector } from "react-redux"
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 function SideBar() {
-  const menuOpen = useSelector(store => store.app.isMenuOpen)
+  const menuOpen = useSelector((store) => store.app.isMenuOpen);
+  const navigate = useNavigate();
+
   return (
-    <div className={ menuOpen? "w-[10rem] pl-4 pt-5 ": 'hidden'}>
+    <div className={menuOpen ? "w-[10rem] pl-4 pt-5  " : "hidden"}>
       <div>
-        <p>Home</p>
+        <p
+          onClick={() => {
+            navigate("/");
+          }}
+          className="cursor-pointer  rounded-lg px-2 hover:bg-black hover:text-white"
+        >
+          Home
+        </p>
         <p>Shorts</p>
         <p>Video</p>
         <p>Live</p>
@@ -25,7 +35,7 @@ function SideBar() {
         <p>Movies</p>
       </div>
     </div>
-  )
+  );
 }
 
-export default SideBar
+export default SideBar;
