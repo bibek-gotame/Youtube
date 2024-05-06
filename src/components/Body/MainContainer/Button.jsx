@@ -8,7 +8,7 @@ function Button({data}) {
     onClick={()=>{
       dispatch(addSearchQuery(data))
     }}
-     className="px-4 py-1 bg-black text-white font-semibold rounded-md">
+     className="px-4 py-1 bg-black text-white font-semibold rounded-md cursor-pointer">
         {data}
     </div>
   )

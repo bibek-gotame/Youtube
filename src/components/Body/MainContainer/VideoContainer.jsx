@@ -7,8 +7,10 @@ import { Link } from "react-router-dom";
 function VideoContainer() {
   const dispatch = useDispatch();
   const youtubeVideos = useSelector((store) => store.app.youtubeVideos);
+
   const getVideos = async () => {
     const data = await fetch(YTapi);
+    console.log(YTapi);
     const json = await data.json();
     const videos = await json.items;
     dispatch(addYoutubeVideos(videos));
