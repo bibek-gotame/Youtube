@@ -24,7 +24,7 @@ function App() {
   return (
     <div>
       <Provider store={store}>
-        {/* <Header />   */}
+
         <RouterProvider router={router} />
       </Provider>
     </div>

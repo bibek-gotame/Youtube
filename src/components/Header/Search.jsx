@@ -37,11 +37,11 @@ function Search() {
 
   return (
     <div>
-      <div className="search col-span-10   h-8   flex items-center">
+      <div className="search  col-span-10   h-8   flex items-center">
         <input
           type="text"
           placeholder="Search"
-          className="rounded-l-full border-2 focus:outline-none py-1 px-4 w-[30rem]"
+          className="rounded-l-full border-2 focus:outline-none py-1 px-4 md:w-[25rem] lg:w-[30rem]"
           value={searchQuerySuggestion}
           onChange={(e) => setsearchQuerySuggestion(e.target.value)}
           onFocus={() => setShowSuggestion(true)}

@@ -10,7 +10,6 @@ function LiveChat() {
   const [addMessage, setAddMessage] = useState("");
   useEffect(() => {
     const chat = setInterval(() => {
-      console.log('hi');
       dispatch(
         addChat({
           name: generateName(),
@@ -21,7 +20,7 @@ function LiveChat() {
     }, 2000);
   }, []);
   return (
-    <div className="border-2 w-[24rem]  rounded-lg bg-slate-100">
+    <div className="border-2 lg:w-[24rem]  rounded-lg bg-slate-100">
       <p className="border-b-2 border-black px-4 font-bold">Top chat</p>
       <div className="flex flex-col-reverse overflow-y-scroll h-[20rem] mt-2">
         <div>

@@ -9,7 +9,7 @@ export const buttonsData = [
     { id: 8, name: 'Space' }
 ];
 //  export const YTapi = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=" + import.meta.env.VITE_APP_YT_API
- export const YTapi = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=${import.meta.env.VITE_APP_YT_API}`;
+ export const YTapi = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=US&key=${import.meta.env.VITE_APP_YT_API}`;
 
 
 export const searchQueryAPI = 'https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q='

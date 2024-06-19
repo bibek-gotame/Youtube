@@ -6,7 +6,7 @@ function SideBar() {
   const navigate = useNavigate();
 
   return (
-    <div className={menuOpen ? "w-[10rem] pl-4 pt-5  " : "hidden"}>
+    <div className={menuOpen ? "w-[10rem] pl-4 pt-5 hidden md:inline-block " : "hidden"}>
       <div>
         <p
           onClick={() => {
